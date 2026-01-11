@@ -49,8 +49,6 @@ function filterMovies() {
         return matchName && matchYear && matchGenre && matchRating;
     });
 
-    console.log("Найдено фильмов:", filtered.length);
-
     $('#pagination-container').pagination('destroy'); 
     initPagination(filtered); 
 }
@@ -143,4 +141,5 @@ function removeFromBookmarks(id) {
 }
 
 searchBtn.addEventListener('click', filterMovies);
+
 getMovies();
